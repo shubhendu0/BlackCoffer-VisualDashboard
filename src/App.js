@@ -17,6 +17,7 @@ import {
   getLoginStatus, 
   getUser 
 } from './redux/features/auth/authActions';
+import { getAllData } from './redux/features/data/dataActions';
 import ProtectedRoute from './components/protected';
 import Profile from './pages/profile';
 
@@ -24,7 +25,7 @@ axios.defaults.withCredentials = true;
 
 function App() {
   const dispatch = useDispatch();
-  const { user, isLoggedIn} = useSelector((state) => state.auth);
+  const { user, isLoggedIn } = useSelector((state) => state.auth);
   const mode = useSelector((state) => state.theme.mode);
   const curr_mode = JSON.parse(localStorage.getItem("currentMode"));
   const theme = useMemo(() => createTheme(themeSettings(curr_mode)), [mode]);
@@ -35,6 +36,10 @@ function App() {
       dispatch(getUser());
     } 
   }, [dispatch, isLoggedIn, user])
+
+  useEffect(()=>{
+    dispatch(getAllData());
+  },[])
 
   return (
     <div className="App">
@@ -50,6 +55,7 @@ function App() {
         />
         <ThemeProvider theme={theme}>
         <CssBaseline/> 
+          
           <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
           {
             isLoggedIn 
@@ -60,7 +66,7 @@ function App() {
           }
             <Routes>
               <Route path="/login" element={<Login/>}/>
-              <Route path="/signup" element={<Signup/>}/> 
+              <Route path="/signup" element={<Signup/>} /> 
               <Route path="/contact" element={<Contact/>}/>  
               <Route element={<ProtectedRoute/>}>     
                 <Route path="/" element={<Home/>}/>
