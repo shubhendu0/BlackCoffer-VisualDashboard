@@ -98,6 +98,8 @@ const PieChartComponent = ({data, variable, sector}) => {
                     label={renderCustomizedLabel}
                 >
                     {
+                        pieData.length > 0
+                        ?
                         pieData.map((entry, index) => (
                             <>
                                 <Cell 
@@ -106,7 +108,9 @@ const PieChartComponent = ({data, variable, sector}) => {
                                 />
                             </>
                         ))
-                    }                   
+                        :
+                        null
+                     }
                 </Pie>
                 <Tooltip content={<CustomTooltip/>}/>
                 <Legend/>
