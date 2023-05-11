@@ -7,7 +7,7 @@ const Container = styled(Box)`
     /* border: 1px solid #d3cede; 
     background: #d3cede; */
     border-radius: 10px;
-    margin: auto;
+    margin: 20px auto;
     padding: 0px;
     display: flex;
     justify-contents: center;
