@@ -64,9 +64,6 @@
 export const themeSettings = (mode) => {
     return {
         palette: {
-            primary: {
-              main: '#f44336', // Replace with your desired primary color
-            },
             mode: mode,
 //             ...(mode === "dark"
 //             ? 
