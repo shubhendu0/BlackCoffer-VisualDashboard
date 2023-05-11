@@ -68,7 +68,7 @@ const PieChartComponent = ({data, variable, sector}) => {
             //console.log(data, variable, sector)
             const counts = {};
             for (const item of data) {
-                if(item[variable] != "" && item.sector === sector){
+                if(item[variable] !== "" && item.sector === sector){
                     const value = item[variable];
                     counts[value] = (counts[value] || 0) + 1;
                 }             
