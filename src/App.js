@@ -48,8 +48,8 @@ function App() {
           theme="dark"
           limit={2}
         />
-//         <ThemeProvider theme={theme}>
-//         <CssBaseline/> 
+        <ThemeProvider theme={theme}>
+        <CssBaseline/> 
           <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
           {
             isLoggedIn 
@@ -68,7 +68,7 @@ function App() {
               </Route>
             </Routes>
           </GoogleOAuthProvider>   
-//         </ThemeProvider>
+        </ThemeProvider>
       </BrowserRouter>
     </div>
   )
