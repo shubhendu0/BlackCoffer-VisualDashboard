@@ -19,8 +19,8 @@ const Home = () => {
                 <Grid container
                 marginTop="70px"
                 display="table-column">
-                    <FirstRow/>
-                    <SecondRow/>
+//                     <FirstRow/>
+//                     <SecondRow/>
                 </Grid>
             </Grid>
         </>
