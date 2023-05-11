@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import BarChart from '../../components/barChart';
 
 const Container = styled(Box)`
-    border: 1px solid #d3cede; 
-    /* background: #d3cede; */
+    /* border: 1px solid #d3cede; 
+    background: #d3cede; */
     border-radius: 10px;
     margin: auto;
     padding: 0px;
