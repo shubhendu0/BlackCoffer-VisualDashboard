@@ -42,7 +42,7 @@ const SecondRow = () => {
   "Colombia", "Niger", "Libya", "Brazil", "China", "South Sudan"
   ]
   
-  const [country, setCountry] = useState("India");
+  const [country, setCountry] = useState("Mexico");
 
   const data = useSelector(state => state.data.data);
 
