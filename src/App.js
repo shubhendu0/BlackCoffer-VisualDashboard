@@ -50,6 +50,7 @@ function App() {
         />
         <ThemeProvider theme={theme}>
         <CssBaseline/> 
+          <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
           {
             isLoggedIn 
             ?
@@ -57,10 +58,9 @@ function App() {
             :
             null
           }
-          <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
             <Routes>
               <Route path="/login" element={<Login/>}/>
-              <Route path="/signup" element={<Signup/>} /> 
+              <Route path="/signup" element={<Signup/>}/> 
               <Route path="/contact" element={<Contact/>}/>  
               <Route element={<ProtectedRoute/>}>     
                 <Route path="/" element={<Home/>}/>
