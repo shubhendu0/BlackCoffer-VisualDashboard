@@ -34,8 +34,8 @@ const Signup = () => {
   }
   const paperStyle = {
     padding :"30px",
-    height:'560px',
-    width:'390px', 
+    height:'500px',
+    width:'360px', 
     margin:"auto",
   }
     const avatarStyle={
