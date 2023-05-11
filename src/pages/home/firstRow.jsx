@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import PieChart from '../../components/pieChart';
 
 const Container = styled(Box)`
-    border: 1px solid #d3cede; 
-    /* background: #1a237e;*/
+    /* border: 1px solid #d3cede; 
+    background: #1a237e;*/
     border-radius: 10px;
     margin: auto;
     padding: 0px;
