@@ -18,7 +18,7 @@ const BarChartComponent = ({data, country}) => {
     const [barData, setBarData] = useState([]);
 
     useEffect(()=>{
-        const result = data.filter((item) => (item.country === country && item.sector != ""))
+        const result = data.filter((item) => (item.country === country && item.sector !== ""))
         setBarData(result);
         console.log(result)
     },[data, country])
