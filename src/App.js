@@ -39,7 +39,7 @@ function App() {
 
   useEffect(()=>{
     dispatch(getAllData());
-  },[])
+  },[dispatch])
 
   return (
     <div className="App">
