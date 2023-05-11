@@ -53,8 +53,7 @@ function App() {
           theme="dark"
           limit={2}
         />
-         /*<ThemeProvider theme={theme}>*/
-         /* <CssBaseline/> */
+         
           
           <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
           {
@@ -74,7 +73,7 @@ function App() {
               </Route>
             </Routes>
           </GoogleOAuthProvider>   
-        /*</ThemeProvider>*/
+        
       </BrowserRouter>
     </div>
   )
