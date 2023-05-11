@@ -64,9 +64,7 @@ const Navbar = () => {
                     </Typography>
 
                     <Stack direction="row" >
-                       /* <IconButton onClick={() => dispatch(setMode())}>
-                            <DarkModeIcon/> 
-                        </IconButton>  */
+                       
 
                         <IconButton>
                             <PersonIcon/> 
