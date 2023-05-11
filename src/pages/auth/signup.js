@@ -24,7 +24,7 @@ const Signup = () => {
   const [password2, setPassword2] = useState("");
 
   const boxStyle = {
-    margin:"0",
+    margin:"0px",
     padding :"40px",
     width: "100vw",
     height:"100vh",
