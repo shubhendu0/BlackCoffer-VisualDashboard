@@ -63,16 +63,16 @@ const authSlice = createSlice({
             state.isSuccess = true;
             state.isLoggedIn = true;
             state.user = action.payload;
-            toast.success("Login Successful");
+            //toast.success("Login Successful");
           })
           .addCase(login.rejected, (state, action) => {
             state.isLoading = false;
             state.isError = true;
             state.message = action.payload;
             state.user = null;
-            toast.error(action.payload,{
-              toastId : "error"
-            });
+//             toast.error(action.payload,{
+//               toastId : "error"
+//             });
           })
 
           //-------------------------- Get Login Status -----------------//
@@ -89,9 +89,9 @@ const authSlice = createSlice({
             state.isLoading = false;
             state.isError = true;
             state.message = action.payload;
-            toast.error(action.payload,{
-              toastId : "error"
-            });
+//             toast.error(action.payload,{
+//               toastId : "error"
+//             });
           })         
  
           
@@ -109,9 +109,9 @@ const authSlice = createSlice({
             state.isLoading = false;
             state.isError = true;
             state.message = action.payload;
-            toast.error(action.payload,{
-              toastId : "error"
-            });
+//             toast.error(action.payload,{
+//               toastId : "error"
+//             });
           })
 
 
