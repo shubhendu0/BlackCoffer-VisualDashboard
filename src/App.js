@@ -26,7 +26,7 @@ axios.defaults.withCredentials = true;
 function App() {
   const dispatch = useDispatch();
   const { user, isLoggedIn } = useSelector((state) => state.auth);
-  const mode = "light";
+  const mode = useSelector((state) => state.theme.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
   useEffect(()=>{
