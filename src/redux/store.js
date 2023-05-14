@@ -7,7 +7,7 @@ import dataReducer from "./features/data/dataSlice";
 export const store = configureStore({
   reducer: {
     auth : authReducer,
-    //theme : themeReducer,
+    theme : themeReducer,
     data : dataReducer
   },
 });
