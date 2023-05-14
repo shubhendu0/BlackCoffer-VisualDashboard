@@ -6,7 +6,7 @@ import {
     getUser,
     logout 
 } from "../redux/features/auth/authActions";
-//import { setMode } from '../redux/features/theme/themeSlice';
+import { setMode } from '../redux/features/theme/themeSlice';
 import {
     Box,
     AppBar,
@@ -64,7 +64,9 @@ const Navbar = () => {
                     </Typography>
 
                     <Stack direction="row" >
-                       
+                        <IconButton onClick={() => dispatch(setMode())}>
+                            <DarkModeIcon/> 
+                        </IconButton>
 
                         <IconButton>
                             <PersonIcon/> 
