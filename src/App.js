@@ -1,6 +1,6 @@
 import './App.css';
-// import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
-// import { themeSettings } from './redux/features/theme/themePalette';
+import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
+import { themeSettings } from './redux/features/theme/themePalette';
 import { useMemo, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
@@ -26,9 +26,8 @@ axios.defaults.withCredentials = true;
 function App() {
   const dispatch = useDispatch();
   const { user, isLoggedIn } = useSelector((state) => state.auth);
-//   const mode = useSelector((state) => state.theme.mode);
-//   const curr_mode = JSON.parse(localStorage.getItem("currentMode"));
-//   const theme = useMemo(() => createTheme(themeSettings(curr_mode)), [mode]);
+  const mode = useSelector((state) => state.theme.mode);
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
   useEffect(()=>{
     dispatch(getLoginStatus());
@@ -53,8 +52,8 @@ function App() {
           theme="dark"
           limit={2}
         />
-         
-          
+        <ThemeProvider theme={mode}> 
+          <CssBaseline/>          
           <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
           {
             isLoggedIn 
@@ -73,7 +72,7 @@ function App() {
               </Route>
             </Routes>
           </GoogleOAuthProvider>   
-        
+       </ThemeProvider> 
       </BrowserRouter>
     </div>
   )
