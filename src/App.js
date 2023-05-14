@@ -52,7 +52,7 @@ function App() {
           theme="dark"
           limit={2}
         />
-        <ThemeProvider theme={mode}> 
+        <ThemeProvider theme={theme}> 
           <CssBaseline/>          
           <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
           {
