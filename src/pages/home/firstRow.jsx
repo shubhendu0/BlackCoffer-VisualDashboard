@@ -4,29 +4,22 @@ import { useSelector } from 'react-redux';
 import PieChart from '../../components/pieChart';
 
 const Container = styled(Box)`
-    /* border: 1px solid #d3cede; 
-    background: #1a237e;*/
     border-radius: 10px;
     margin: auto;
     padding: 0px;
-    display: flex;
+    display: block;
     align-items: center;
-    /* flex-direction: row; */
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
 `;
 
 const InnerBox = styled(Box)`
-  /* border: 1px solid #d3cede;
-  background: #d3cede; */
   border-radius: 10px;
-  margin: auto;
+  width:98vw;
+  margin: 10px 0;
   padding: 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* width: 50vw; 
-  height: 580px;*/
 `; 
 
 const Heading = styled(Typography)`
@@ -47,8 +40,7 @@ const FirstRow = () => {
   return (
     <Container>
       <InnerBox>
-        <Heading> Topics </Heading>
-        <PieChart data={data} variable="topic" sector={sector}/>
+        <Heading> PieChart for Topics based on Sector </Heading>
       </InnerBox>
 
       <InnerBox>
@@ -71,6 +63,8 @@ const FirstRow = () => {
         </Select>
       </FormControl> 
       </InnerBox>
+
+      <PieChart data={data} variable="topic" sector={sector}/>
     </Container>
   )
 }
