@@ -4,30 +4,20 @@ import { useSelector } from 'react-redux';
 import BarChart from '../../components/barChart';
 
 const Container = styled(Box)`
-    /* border: 1px solid #d3cede; 
-    background: #d3cede; */
     border-radius: 10px;
-    margin: 20px auto;
+    margin: auto;
     padding: 0px;
-    display: flex;
-    justify-contents: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100vw;
-    height: 100vh;
+    display: block;
+    width: 98vw;
 `;
 
 const InnerBox = styled(Box)`
-  /* border: 1px solid #d3cede;
-  background: #d3cede; */
   border-radius: 10px;
-  margin: auto;
+  margin: 10px 0;
   padding: 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* width: 50vw; 
-  height: 580px;*/
 `; 
 
 const Heading = styled(Typography)`
@@ -42,7 +32,7 @@ const SecondRow = () => {
   "Colombia", "Niger", "Libya", "Brazil", "China", "South Sudan"
   ]
   
-  const [country, setCountry] = useState("Mexico");
+  const [country, setCountry] = useState("India");
 
   const data = useSelector(state => state.data.data);
 
@@ -50,7 +40,6 @@ const SecondRow = () => {
     <Container>
       <InnerBox>
         <Heading> Intensity-Relevance-Likelihood </Heading>
-        <BarChart data={data} country={country}/>
       </InnerBox>
 
       <InnerBox>
@@ -73,6 +62,7 @@ const SecondRow = () => {
         </Select>
       </FormControl> 
       </InnerBox>
+      <BarChart data={data} country={country}/>
     </Container>
   )
 }
