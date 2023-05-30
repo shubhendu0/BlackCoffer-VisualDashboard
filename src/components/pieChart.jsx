@@ -3,14 +3,12 @@ import { styled, Box } from '@mui/material';
 import { useState, useEffect } from 'react';
 
 const Container = styled(Box)`
-    /* border: 1px solid #d3cede; */
     border-radius: 10px;
     margin: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 70vw;
-    height: 90vh;
+    width: 98vw;
 `;
 
 const RADIAN = Math.PI / 180;
@@ -65,10 +63,9 @@ const PieChartComponent = ({data, variable, sector}) => {
 
     useEffect(()=>{
         const countByKey = (data, variable, sector) => {
-            //console.log(data, variable, sector)
             const counts = {};
             for (const item of data) {
-                if(item[variable] !== "" && item.sector === sector){
+                if(item[variable] != "" && item.sector === sector){
                     const value = item[variable];
                     counts[value] = (counts[value] || 0) + 1;
                 }             
@@ -86,14 +83,14 @@ const PieChartComponent = ({data, variable, sector}) => {
 
     return (
         <Container>
-            <PieChart width={590} height={590}>
+            <PieChart width={500} height={500} >
                 <Pie
                     data={pieData}
                     dataKey="count"
                     nameKey="topic"
                     cx="50%"
                     cy="50%"
-                    outerRadius={240}
+                    outerRadius={200}
                     labelLine={false}
                     label={renderCustomizedLabel}
                 >
@@ -110,10 +107,10 @@ const PieChartComponent = ({data, variable, sector}) => {
                         ))
                         :
                         null
-                     }
+                    }                   
                 </Pie>
                 <Tooltip content={<CustomTooltip/>}/>
-                <Legend/>
+                <Legend align="right" />
             </PieChart>
         </Container>
     )
