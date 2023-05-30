@@ -9,23 +9,20 @@ const Container = styled(Box)`
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 70vw;
-    height: 90vh;
+    width: 98vw;
 `;
-
 
 const BarChartComponent = ({data, country}) => {
     const [barData, setBarData] = useState([]);
 
     useEffect(()=>{
-        const result = data.filter((item) => (item.country === country && item.sector !== ""))
+        const result = data.filter((item) => (item.country === country && item.sector != ""))
         setBarData(result);
-        console.log(result)
     },[data, country])
 
     return (
         <Container>
-            <BarChart width={900} height={600} data={barData}>
+            <BarChart width={500} height={500} data={barData}>
                 <CartesianGrid strokeDasharray="3 3"/>
                 <XAxis dataKey="sector"/>
                 <YAxis/>
