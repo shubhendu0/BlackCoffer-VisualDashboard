@@ -59,14 +59,14 @@ const Navbar = () => {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h5" style={{ position: "absolute", top:"50%", left:"50%", transform:"translate(-50%,-50%)"}} >
+                    <Typography variant="h6" style={{ position: "absolute", top:"50%", left:"47%", transform:"translate(-50%,-50%)"}} >
                         DASHBOARD
                     </Typography>
 
-                    <Stack direction="row" >
+                    <Stack direction="row" spacing={0} >
                         <IconButton onClick={() => dispatch(setMode())}>
                             <DarkModeIcon/> 
-                        </IconButton>
+                        </IconButton>  
 
                         <IconButton>
                             <PersonIcon/> 
@@ -77,8 +77,7 @@ const Navbar = () => {
                                                                     
                         <IconButton  onClick={logoutUser}>
                             <LogoutIcon/>
-                        </IconButton>       
-                                
+                        </IconButton>                                       
                     </Stack>                   
                 </Toolbar>
             </AppBar>
