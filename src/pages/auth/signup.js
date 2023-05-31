@@ -123,7 +123,7 @@ const Signup = () => {
                     Register
                 </Button>
                 <Typography > Already have an account ?
-                    <Link href="/login" > Sign In </Link>
+                    <Link href="/" > Sign In </Link>
                 </Typography>
             </Paper>
         </Grid>
