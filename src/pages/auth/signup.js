@@ -26,8 +26,8 @@ const Signup = () => {
   const boxStyle = {
     margin:"0",
     padding :"30px",
-    minWidth: "99vw",
-    minHeight:"99vh",
+    minWidth: "100vw",
+    minHeight:"100vh",
     background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
     backgroundSize: "cover",
     backgroundRepeat: "repeat"
