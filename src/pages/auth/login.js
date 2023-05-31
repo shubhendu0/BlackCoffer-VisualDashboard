@@ -25,25 +25,25 @@ const Login=()=>{
   const [password, setPassword] = useState("");
 
     const boxStyle = {
-      margin:"0px",
-      padding :"40px",
-      width: "100vw",
-      height:"100vh",
+      margin:"0",
+      padding :"30px",
+      width: "98vw",
+      height:"98vh",
       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat"
     }
     const paperStyle = {
       padding :"30px",
-      height:'500px',
-      width:'370px', 
+      height:'85vh',
+      width:'65vw', 
       margin:"auto",
     }
     const avatarStyle={
       backgroundColor:'#1bbd7e'
     }
     const btnstyle={
-      margin:'25px 0'
+      margin:'20px 0'
     }
 
     const handleLogin = async (e) => {
