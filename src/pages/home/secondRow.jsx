@@ -8,7 +8,7 @@ const Container = styled(Box)`
     margin: auto;
     padding: 0px;
     display: block;
-    width: 98vw;
+    width: 100vw;
 `;
 
 const InnerBox = styled(Box)`
