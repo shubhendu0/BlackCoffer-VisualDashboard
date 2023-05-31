@@ -24,25 +24,25 @@ const Signup = () => {
   const [password2, setPassword2] = useState("");
 
   const boxStyle = {
-    margin:"0px",
-    padding :"40px",
-    width: "100vw",
-    height:"100vh",
+    margin:"0",
+    padding :"30px",
+    width: "98vw",
+    height:"98vh",
     background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"
   }
   const paperStyle = {
-    padding :"30px",
-    height:'500px',
-    width:'360px', 
+    padding :"20px",
+    height:'90vh',
+    width:'65vw', 
     margin:"auto",
   }
     const avatarStyle={
       backgroundColor:'#1bbd7e'
     }
     const btnstyle={
-      margin:'25px 0'
+      margin:'20px 0'
     }
 
     const handleSignup = async(e) => {
@@ -70,7 +70,7 @@ const Signup = () => {
             <Paper elevation={10} style={paperStyle}>
                 <Grid align='center'>
                     <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
-                    <h2>Sign Up</h2>
+                    <h3>Sign Up</h3>
                 </Grid>
                 <TextField 
                   label='Name' 
@@ -122,9 +122,8 @@ const Signup = () => {
                 > 
                     Register
                 </Button>
-
-                <Typography > Don't have an account?
-                  <Link onClick={()=>navigate("/login")}> Sign In </Link>
+                <Typography > Already have an account ?
+                    <Link href="/login" > Sign In </Link>
                 </Typography>
             </Paper>
         </Grid>
