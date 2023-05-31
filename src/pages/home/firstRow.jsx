@@ -9,7 +9,7 @@ const Container = styled(Box)`
     padding: 0px;
     display: block;
     align-items: center;
-    width: 98vw;
+    width: 100vw;
 `;
 
 const InnerBox = styled(Box)`
