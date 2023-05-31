@@ -24,10 +24,10 @@ const Signup = () => {
   const [password2, setPassword2] = useState("");
 
   const boxStyle = {
-    margin:"0px",
-    padding :"0px",
-    minWidth: "98vw",
-    minHeight:"98vh",
+    margin:"0",
+    padding :"30px",
+    minWidth: "99vw",
+    minHeight:"99vh",
     background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
     backgroundSize: "cover",
     backgroundRepeat: "repeat"
@@ -123,7 +123,7 @@ const Signup = () => {
                     Register
                 </Button>
                 <Typography > Already have an account ?
-                    <Link onClick={()=>navigate("/login")}> Sign In </Link>
+                    <Link href="/login" > Sign In </Link>
                 </Typography>
             </Paper>
         </Grid>
