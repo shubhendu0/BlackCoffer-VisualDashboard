@@ -26,9 +26,9 @@ const Login=()=>{
 
     const boxStyle = {
       margin:"auto",
-      padding :"0px",
-      minWidth: "100vw",
-      minHeight:"100vh",
+      padding :"auto",
+      minWidth: "99vw",
+      minHeight:"99vh",
       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
       backgroundSize: "",
       backgroundRepeat: "repeat"
@@ -37,7 +37,7 @@ const Login=()=>{
       padding :"30px",
       maxHeight:'480px',
       maxWidth:'400px', 
-      margin:"auto",
+      margin:"30px auto",
     }
     const avatarStyle={
       backgroundColor:'#1bbd7e'
