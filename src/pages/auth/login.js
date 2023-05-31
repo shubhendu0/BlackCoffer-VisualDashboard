@@ -25,8 +25,7 @@ const Login=()=>{
   const [password, setPassword] = useState("");
 
     const boxStyle = {
-      margin:"auto",
-      padding :"auto",
+      margin:"0px",
       minWidth: "99vw",
       minHeight:"99vh",
       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
@@ -37,7 +36,7 @@ const Login=()=>{
       padding :"30px",
       maxHeight:'480px',
       maxWidth:'400px', 
-      margin:"30px auto",
+      margin:"auto",
     }
     const avatarStyle={
       backgroundColor:'#1bbd7e'
