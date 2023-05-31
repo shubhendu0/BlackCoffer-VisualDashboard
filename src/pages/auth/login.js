@@ -25,7 +25,7 @@ const Login=()=>{
   const [password, setPassword] = useState("");
 
     const boxStyle = {
-      margin:"0",
+      margin:"auto",
       padding :"30px",
       minWidth: "100vw",
       minHeight:"100vh",
