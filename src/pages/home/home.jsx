@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 
 const InnerBox = styled(Box)`
   border-radius: 10px;
-  width:98vw;
+  width:100vw;
   margin: 30px 0px;
   padding: 0px;
   display: flex;
