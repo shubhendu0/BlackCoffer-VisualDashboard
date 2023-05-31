@@ -123,7 +123,7 @@ const Signup = () => {
                     Register
                 </Button>
                 <Typography > Already have an account ?
-                    <Link href="/" > Sign In </Link>
+                    <Link onClick={()=>navigate("/login")}> Sign In </Link>
                 </Typography>
             </Paper>
         </Grid>
