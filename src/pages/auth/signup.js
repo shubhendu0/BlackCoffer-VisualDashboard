@@ -24,10 +24,10 @@ const Signup = () => {
   const [password2, setPassword2] = useState("");
 
   const boxStyle = {
-    margin:"0",
+    margin:"0px",
     padding :"0px",
-    minWidth: "100vw",
-    minHeight:"100vh",
+    minWidth: "98vw",
+    minHeight:"98vh",
     background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
     backgroundSize: "cover",
     backgroundRepeat: "repeat"
