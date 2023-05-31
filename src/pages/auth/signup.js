@@ -26,16 +26,16 @@ const Signup = () => {
   const boxStyle = {
     margin:"0",
     padding :"30px",
-    width: "98vw",
-    height:"98vh",
+    minWidth: "99vw",
+    minHeight:"99vh",
     background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
     backgroundSize: "cover",
-    backgroundRepeat: "no-repeat"
+    backgroundRepeat: "repeat"
   }
   const paperStyle = {
     padding :"20px",
-    height:'90vh',
-    width:'65vw', 
+    maxHeight:'580px',
+    maxWidth:'400px',  
     margin:"auto",
   }
     const avatarStyle={
