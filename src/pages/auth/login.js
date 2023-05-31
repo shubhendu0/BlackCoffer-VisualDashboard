@@ -27,16 +27,16 @@ const Login=()=>{
     const boxStyle = {
       margin:"0",
       padding :"30px",
-      width: "98vw",
-      height:"98vh",
+      minWidth: "99vw",
+      minHeight:"99vh",
       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat"
+      backgroundSize: "",
+      backgroundRepeat: "repeat"
     }
     const paperStyle = {
       padding :"30px",
-      height:'85vh',
-      width:'65vw', 
+      maxHeight:'480px',
+      maxWidth:'400px', 
       margin:"auto",
     }
     const avatarStyle={
