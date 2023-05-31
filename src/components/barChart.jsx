@@ -9,7 +9,7 @@ const Container = styled(Box)`
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 98vw;
+    width: 100vw;
 `;
 
 const BarChartComponent = ({data, country}) => {
