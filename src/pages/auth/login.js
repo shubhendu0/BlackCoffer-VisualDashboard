@@ -26,10 +26,10 @@ const Login=()=>{
 
     const boxStyle = {
       margin:"0px",
-      minWidth: "99vw",
-      minHeight:"99vh",
+      minWidth: "98vw",
+      minHeight:"98vh",
       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
-      backgroundSize: "",
+      backgroundSize: "fill",
       backgroundRepeat: "repeat"
     }
     const paperStyle = {
