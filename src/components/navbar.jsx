@@ -29,7 +29,7 @@ const Navbar = () => {
 
     const navigate = useNavigate();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);    
-    const userName = useSelector((state) => state.auth.user.name) || ""
+    //const userName = useSelector((state) => state.auth.user.name) || ""
 
     const getFirstLetters = (str) => {
         const firstLetters = str
@@ -68,16 +68,16 @@ const Navbar = () => {
                             <DarkModeIcon/> 
                         </IconButton>  
 
-                        <IconButton>
-                            <PersonIcon/> 
-                            <Typography fontSize="12" >
-                                {getFirstLetters(userName)} 
-                            </Typography>
-                        </IconButton>
+//                         <IconButton>
+//                             <PersonIcon/> 
+//                             <Typography fontSize="12" >
+//                                 {getFirstLetters(userName)} 
+//                             </Typography>
+//                         </IconButton>
                                                                     
-                        <IconButton  onClick={logoutUser}>
-                            <LogoutIcon/>
-                        </IconButton>                                       
+//                         <IconButton  onClick={logoutUser}>
+//                             <LogoutIcon/>
+//                         </IconButton>                                       
                     </Stack>                   
                 </Toolbar>
             </AppBar>
