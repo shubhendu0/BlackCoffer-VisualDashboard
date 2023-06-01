@@ -4,15 +4,13 @@ import { useSelector } from 'react-redux';
 import BarChart from '../../components/barChart';
 
 const Container = styled(Box)`
-    border-radius: 10px;
     margin: auto;
     padding: 0px;
     display: block;
-    width: 100vw;
+    align-items: center;
 `;
 
 const InnerBox = styled(Box)`
-  border-radius: 10px;
   margin: 10px 0;
   padding: 0px;
   display: flex;
@@ -26,7 +24,7 @@ const Heading = styled(Typography)`
 `;
 
 
-const SecondRow = () => {
+const SecondChart = () => {
   const countries = ["United States of America", "Lebanon", "Nigeria",
   "Mexico", "South Africa", "India", "Saudi Arabia", "Ukraine", "Azerbaijan",
   "Colombia", "Niger", "Libya", "Brazil", "China", "South Sudan"
@@ -67,4 +65,4 @@ const SecondRow = () => {
   )
 }
 
-export default SecondRow;
+export default SecondChart;
