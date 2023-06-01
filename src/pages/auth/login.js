@@ -25,20 +25,19 @@ const Login=()=>{
   const [password, setPassword] = useState("");
 
     const boxStyle = {
-      margin:"0px",
-      padding :"0px",
-      minWidth: "100vw",
-      minHeight:"100vh",
+      margin:"0",
+      padding :"30px",
+      minWidth: "99vw",
+      minHeight:"99vh",
       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
-      backgroundSize: "fill",
+      backgroundSize: "",
       backgroundRepeat: "repeat"
-      alignItems: "center"
     }
     const paperStyle = {
-      padding :"40px",
-      maxHeight:'450px',
-      maxWidth:'300px', 
-      margin:"30px auto",
+      padding :"30px",
+      maxHeight:'480px',
+      maxWidth:'400px', 
+      margin:"auto",
     }
     const avatarStyle={
       backgroundColor:'#1bbd7e'
