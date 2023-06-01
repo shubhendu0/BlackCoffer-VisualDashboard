@@ -48,8 +48,8 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
               open={isDrawerOpen}
             >
                 <Box 
-                  p={2} 
-                  width='200px' 
+                  p={1} 
+                  width='210px' 
                   role='presentation' 
                   textAlign='center'
                 >
@@ -63,7 +63,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <HomeIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="Home"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Home"/>
                             </ListItemButton>
                         </ListItem>
 
@@ -72,7 +72,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <PersonIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="My Profile"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="My Profile"/>
                             </ListItemButton>
                         </ListItem>
 
@@ -81,7 +81,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <LogoutIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="Logout"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Logout"/>
                             </ListItemButton>
                         </ListItem>                                                  
                     </List>
@@ -94,7 +94,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <InboxIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="Inbox"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Inbox"/>
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding>
@@ -102,7 +102,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <MailIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="Contact"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Contact"/>
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding>
@@ -110,7 +110,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <InfoIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="About Us"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="About Us"/>
                             </ListItemButton>
                         </ListItem>
                     </List>
