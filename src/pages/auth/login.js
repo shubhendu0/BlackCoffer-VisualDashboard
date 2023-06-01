@@ -29,15 +29,16 @@ const Login=()=>{
       padding :"0px",
       minWidth: "100%",
       minHeight:"100%",
-      backgroundColor : "#3f50b5"
+      backgroundColor : "#3f50b5",
 //       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
 //       backgroundSize: "fill",
 //       backgroundRepeat: "repeat"
+      alignItems: "center"
     }
     const paperStyle = {
       padding :"40px",
-      maxHeight:'480px',
-      maxWidth:'400px', 
+      maxHeight:'450px',
+      maxWidth:'300px', 
       margin:"30px auto",
     }
     const avatarStyle={
