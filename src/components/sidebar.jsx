@@ -49,7 +49,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
             >
                 <Box 
                   p={2} 
-                  width='250px' 
+                  width='200px' 
                   role='presentation' 
                   textAlign='center'
                 >
