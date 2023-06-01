@@ -72,7 +72,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <PersonIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="My Profile"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Profile"/>
                             </ListItemButton>
                         </ListItem>
 
