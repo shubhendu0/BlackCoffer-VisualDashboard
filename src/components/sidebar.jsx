@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logout, getUser } from "../redux/features/auth/authActions";
 import { 
     Box, 
@@ -35,6 +35,8 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
         dispatch(getUser());
     },[dispatch])
 
+    const userName = useSelector((state) => state.auth.user.name) || ""
+
     const logoutUser = async () => {
         dispatch(logout());
         navigate("/")
@@ -63,7 +65,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <HomeIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Home"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="Home"/>
                             </ListItemButton>
                         </ListItem>
 
@@ -72,7 +74,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <PersonIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Profile"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary={`Profile (${userName})`}/>
                             </ListItemButton>
                         </ListItem>
 
@@ -81,7 +83,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <LogoutIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Logout"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="Logout"/>
                             </ListItemButton>
                         </ListItem>                                                  
                     </List>
@@ -94,7 +96,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <InboxIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Inbox"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="Inbox"/>
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding>
@@ -102,7 +104,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <MailIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="Contact"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="Contact"/>
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding>
@@ -110,7 +112,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 <ListItemIcon>
                                     <InfoIcon/>
                                 </ListItemIcon>                             
-                                <ListItemText primaryTypographyProps={{fontSize: '24px'}}  primary="About Us"/>
+                                <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="About Us"/>
                             </ListItemButton>
                         </ListItem>
                     </List>
