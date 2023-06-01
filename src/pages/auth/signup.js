@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Grid, Paper, Avatar, TextField, Button, Typography, Link } from '@mui/material'
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../redux/features/auth/authActions";
 import { toast } from "react-toastify";
@@ -34,7 +33,7 @@ const Signup = () => {
   }
   const paperStyle = {
     padding :"20px",
-    maxHeight:'580px',
+    maxHeight:'480px',
     maxWidth:'400px',  
     margin:"auto",
   }
@@ -69,7 +68,6 @@ const Signup = () => {
         <Grid style={boxStyle}>
             <Paper elevation={10} style={paperStyle}>
                 <Grid align='center'>
-                    <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                     <h3>Sign Up</h3>
                 </Grid>
                 <TextField 
