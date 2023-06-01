@@ -32,7 +32,7 @@ const Signup = () => {
     backgroundRepeat: "repeat"
   }
   const paperStyle = {
-    padding :"20px",
+    padding :"30px",
     maxHeight:'480px',
     maxWidth:'400px',  
     margin:"auto",
