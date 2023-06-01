@@ -8,7 +8,6 @@ const Container = styled(Box)`
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
 `;
 
 const RADIAN = Math.PI / 180;
@@ -83,14 +82,14 @@ const PieChartComponent = ({data, variable, sector}) => {
 
     return (
         <Container>
-            <PieChart width={500} height={500} >
+            <PieChart width={450} height={500} >
                 <Pie
                     data={pieData}
                     dataKey="count"
                     nameKey="topic"
                     cx="50%"
                     cy="50%"
-                    outerRadius={200}
+                    outerRadius={190}
                     labelLine={false}
                     label={renderCustomizedLabel}
                 >
