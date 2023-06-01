@@ -59,7 +59,7 @@ const Navbar = () => {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h6" style={{ position: "absolute", top:"50%", left:"47%", transform:"translate(-50%,-50%)"}} >
+                    <Typography variant="h6" style={{ position: "absolute", top:"50%", left:"50%", transform:"translate(-50%,-50%)"}} >
                         DASHBOARD
                     </Typography>
 
