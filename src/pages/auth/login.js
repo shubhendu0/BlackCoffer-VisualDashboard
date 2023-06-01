@@ -35,10 +35,10 @@ const Login=()=>{
 //       backgroundRepeat: "repeat"
     }
     const paperStyle = {
-      padding :"30px",
+      padding :"0px",
       maxHeight:'480px',
       maxWidth:'400px', 
-      margin:"auto",
+      margin:"30px auto",
     }
     const avatarStyle={
       backgroundColor:'#1bbd7e'
