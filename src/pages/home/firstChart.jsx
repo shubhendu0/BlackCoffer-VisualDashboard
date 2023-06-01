@@ -4,17 +4,13 @@ import { useSelector } from 'react-redux';
 import PieChart from '../../components/pieChart';
 
 const Container = styled(Box)`
-    border-radius: 10px;
     margin: auto;
     padding: 0px;
     display: block;
     align-items: center;
-    width: 100vw;
 `;
 
 const InnerBox = styled(Box)`
-  border-radius: 10px;
-  width:98vw;
   margin: 10px 0;
   padding: 0px;
   display: flex;
@@ -27,7 +23,7 @@ const Heading = styled(Typography)`
   font-weight: 600;
 `;
 
-const FirstRow = () => {
+const FirstChart = () => {
   const sectorArr = ["Energy", "Environment", "Government", "Aerospace & defence",
     "Manufacturing", "Retail", "Financial services", "Support services", "Information Technology",
     "Healthcare", "Security", "Transport", "Tourism & hospitality", "Water","Automotive", "Construction",
@@ -69,4 +65,4 @@ const FirstRow = () => {
   )
 }
 
-export default FirstRow;
+export default FirstChart;
