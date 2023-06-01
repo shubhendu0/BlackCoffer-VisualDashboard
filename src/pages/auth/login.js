@@ -25,13 +25,14 @@ const Login=()=>{
   const [password, setPassword] = useState("");
 
     const boxStyle = {
-      margin:"0",
-      padding :"30px",
-      minWidth: "99vw",
-      minHeight:"99vh",
-      background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
-      backgroundSize: "",
-      backgroundRepeat: "repeat"
+      margin:"0px",
+      padding :"0px",
+      minWidth: "100vw",
+      minHeight:"100vh",
+      backgroundColor : "#3f50b5"
+//       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
+//       backgroundSize: "fill",
+//       backgroundRepeat: "repeat"
     }
     const paperStyle = {
       padding :"30px",
