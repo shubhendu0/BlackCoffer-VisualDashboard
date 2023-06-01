@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './sidebar';
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { 
     getUser,
     logout 
@@ -29,7 +29,6 @@ const Navbar = () => {
 
     const navigate = useNavigate();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);    
-    //const userName = useSelector((state) => state.auth.user.name) || ""
 
     const getFirstLetters = (str) => {
         const firstLetters = str
@@ -66,18 +65,7 @@ const Navbar = () => {
                     <Stack direction="row" spacing={0} >
                         <IconButton onClick={() => dispatch(setMode())}>
                             <DarkModeIcon/> 
-                        </IconButton>  
-
-//                         <IconButton>
-//                             <PersonIcon/> 
-//                             <Typography fontSize="12" >
-//                                 {getFirstLetters(userName)} 
-//                             </Typography>
-//                         </IconButton>
-                                                                    
-//                         <IconButton  onClick={logoutUser}>
-//                             <LogoutIcon/>
-//                         </IconButton>                                       
+                        </IconButton>                                         
                     </Stack>                   
                 </Toolbar>
             </AppBar>
