@@ -27,8 +27,8 @@ const Login=()=>{
     const boxStyle = {
       margin:"0px",
       padding :"0px",
-      minWidth: "101vw",
-      minHeight:"101vh",
+      minWidth: "100vw",
+      minHeight:"100vh",
       backgroundColor : "#3f50b5",
 //       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
 //       backgroundSize: "fill",
