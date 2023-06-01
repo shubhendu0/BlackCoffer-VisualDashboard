@@ -4,12 +4,10 @@ import { styled, Box } from '@mui/material';
 import { useState, useEffect } from 'react';
 
 const Container = styled(Box)`
-    border-radius: 10px;
     margin: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
 `;
 
 const BarChartComponent = ({data, country}) => {
@@ -22,7 +20,7 @@ const BarChartComponent = ({data, country}) => {
 
     return (
         <Container>
-            <BarChart width={500} height={500} data={barData}>
+            <BarChart width={400} height={500} data={barData}>
                 <CartesianGrid strokeDasharray="3 3"/>
                 <XAxis dataKey="sector"/>
                 <YAxis/>
