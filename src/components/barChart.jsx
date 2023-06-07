@@ -19,7 +19,7 @@ const BarChartComponent = ({data, country, sector, pestle, source}) => {
 
     return (
         <Container>
-            <BarChart width={450} height={350} data={barData}>
+            <BarChart width={400} height={350} data={barData}>
                 <CartesianGrid strokeDasharray="3 3"/>
                 <XAxis dataKey="topic"/>
                 {/* <YAxis/> */}
