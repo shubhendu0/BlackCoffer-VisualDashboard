@@ -4,18 +4,13 @@ import { useSelector } from 'react-redux';
 import PieChart from '../../components/pieChart';
 
 const Container = styled(Box)`
-    margin: auto;
-    padding: 0px;
     display: block;
     align-items: center;
 `;
 
 const InnerBox = styled(Box)`
   margin: 10px 0;
-  padding: 0px;
-  display: flex;
   align-items: center;
-  flex-direction: column;
 `; 
 
 const Heading = styled(Typography)`
@@ -24,43 +19,70 @@ const Heading = styled(Typography)`
 `;
 
 const FirstChart = () => {
-  const sectorArr = ["Energy", "Environment", "Government", "Aerospace & defence",
-    "Manufacturing", "Retail", "Financial services", "Support services", "Information Technology",
-    "Healthcare", "Security", "Transport", "Tourism & hospitality", "Water","Automotive", "Construction",
-    "Media & entertainment", "Food & agriculture"
-  ]
-
-  const [sector, setSector] = useState("Environment");
+  const [country, setCountry] = useState("India");
+  const [sector, setSector] = useState("Energy");
   const data = useSelector(state => state.data.data);
+ 
+  const uniqueValuesSet1 = new Set();
+  data.forEach(obj => {
+    const value = obj["country"];
+    if (value !== "") {
+      uniqueValuesSet1.add(value);
+    }
+  })
+  const countryArr = Array.from(uniqueValuesSet1);
+  //console.log(countryArr);
+
+  const uniqueValuesSet2 = new Set();
+  data.forEach(obj => {
+    const value = obj["sector"];
+    if (value !== "" && obj["country"]===country) {
+      uniqueValuesSet2.add(value);
+    }
+  })
+  const sectorArr = Array.from(uniqueValuesSet2);
+  //console.log(sectorArr)
 
   return (
     <Container>
       <InnerBox>
-        <Heading> PieChart for Topics based on Sector </Heading>
+        <Heading> Topics</Heading>
       </InnerBox>
 
       <InnerBox>
-      <FormControl sx={{ m: 0, minWidth: 150 }} size="medium">
-        <InputLabel id="select"> Sector </InputLabel>
-        <Select
-          autoWidth
-          value={sector}
-          labelId="select"
-          onChange={(e)=> setSector(e.target.value)}
-        >                  
-          <MenuItem value={0}> 
-            <em>All</em> 
-          </MenuItem>
-          {
-            sectorArr.map((item) => (
-              <MenuItem value={item}> {item} </MenuItem>
-            ))
-          }
-        </Select>
-      </FormControl> 
+        <FormControl sx={{ m: 0, minWidth: 150 }} size="small">
+          <InputLabel id="select"> Countries </InputLabel>
+          <Select
+            autoWidth
+            value={country}
+            labelId="select"
+            onChange={(e)=> setCountry(e.target.value)}
+          >                  
+            {
+              countryArr.map((item) => (
+                <MenuItem value={item}> {item} </MenuItem>
+              ))
+            }
+          </Select>
+        </FormControl>
+        <FormControl sx={{ m: 0, minWidth: 100 }} size="small">
+          <InputLabel id="select"> Sector </InputLabel>
+          <Select
+            autoWidth
+            value={sector}
+            labelId="select"
+            onChange={(e)=> setSector(e.target.value)}
+          >                  
+            {
+              sectorArr.map((item) => (
+                <MenuItem value={item}> {item} </MenuItem>
+              ))
+            }
+          </Select>
+        </FormControl> 
       </InnerBox>
 
-      <PieChart data={data} variable="topic" sector={sector}/>
+      <PieChart data={data} variable="topic" country={country} sector={sector}/>
     </Container>
   )
 }
