@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './sidebar';
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { 
     getUser,
-    logout 
 } from "../redux/features/auth/authActions";
 import { setMode } from '../redux/features/theme/themeSlice';
 import {
@@ -15,10 +14,8 @@ import {
     Typography,
     IconButton,
 } from '@mui/material';
-import PersonIcon from '@mui/icons-material/Person';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
-import LogoutIcon from '@mui/icons-material/Logout';
 
 
 const Navbar = () => {
@@ -26,26 +23,12 @@ const Navbar = () => {
     useEffect(() => {
         dispatch(getUser())
     }, [dispatch]);
-
-    const navigate = useNavigate();
+    
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);    
-
-    const getFirstLetters = (str) => {
-        const firstLetters = str
-          .split(' ')
-          .map(word => word.charAt(0))
-          .join('.');     
-        return firstLetters;
-    }
-
-    const logoutUser = async () => {
-        dispatch(logout());
-        navigate("/")
-    }
     
     return (
     <>
-        <Box sx={{ flexGrow: 1 }} >
+        <Box>
             <AppBar position='fixed'>
                 <Toolbar style={{ justifyContent : "space-between"}}>
                     <IconButton
@@ -62,10 +45,10 @@ const Navbar = () => {
                         DASHBOARD
                     </Typography>
 
-                    <Stack direction="row" spacing={0} >
+                    <Stack direction="row" >
                         <IconButton onClick={() => dispatch(setMode())}>
                             <DarkModeIcon/> 
-                        </IconButton>                                         
+                        </IconButton>  
                     </Stack>                   
                 </Toolbar>
             </AppBar>
