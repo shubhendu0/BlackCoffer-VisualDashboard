@@ -6,7 +6,7 @@ import BarChart from '../../components/barChart';
 const Container = styled(Box)`
     display: block;
     align-items: center;
-    max-width: 600px;
+    max-width: 500px;
 `;
 
 const InnerBox = styled(Box)`
