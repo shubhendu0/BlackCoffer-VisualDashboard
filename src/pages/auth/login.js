@@ -25,25 +25,26 @@ const Login=()=>{
   const [password, setPassword] = useState("");
 
     const boxStyle = {
-      margin:"0",
-      padding :"30px",
-      minWidth: "99vw",
-      minHeight:"99vh",
+      minWidth: "100vw",
+      minHeight:"100vh",
       background: "url(https://g.foolcdn.com/editorial/images/505008/getty-stock-market-chart.jpg) center/55% repeat-x #000",
-      backgroundSize: "",
-      backgroundRepeat: "repeat"
+      backgroundSize: "cover",
+      backgroundRepeat: "repeat",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+
     }
     const paperStyle = {
       padding :"30px",
-      maxHeight:'480px',
-      maxWidth:'400px', 
-      margin:"auto",
+      height:'500px',
+      width:'320px', 
     }
     const avatarStyle={
       backgroundColor:'#1bbd7e'
     }
     const btnstyle={
-      margin:'20px 0'
+      margin:'15px 0'
     }
 
     const handleLogin = async (e) => {
@@ -71,7 +72,7 @@ const Login=()=>{
                 <Grid align='center'>
                     <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                     <GoogleLogin
-                      padding="10px"
+                      padding="5px"
                       onSuccess={googleLogin}
                       onError={() => {
                         toast.error("Login Failed");
