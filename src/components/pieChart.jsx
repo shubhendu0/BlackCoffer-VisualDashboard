@@ -79,7 +79,7 @@ const PieChartComponent = ({data, variable, country, sector}) => {
 
     return (
         <Container>
-            <PieChart width={450} height={400} >
+            <PieChart width={400} height={400} >
                 <Pie
                     data={pieData}
                     dataKey="count"
