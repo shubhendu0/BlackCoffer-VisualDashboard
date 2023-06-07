@@ -4,26 +4,25 @@ import { styled, Box } from '@mui/material';
 import { useState, useEffect } from 'react';
 
 const Container = styled(Box)`
-    margin: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
 `;
 
-const BarChartComponent = ({data, country}) => {
+const BarChartComponent = ({data, country, sector, pestle, source}) => {
     const [barData, setBarData] = useState([]);
 
     useEffect(()=>{
-        const result = data.filter((item) => (item.country === country && item.sector != ""))
+        const result = data.filter((item) => (item.country === country && item.sector === sector && item.pestle === pestle && item.source === source))
         setBarData(result);
-    },[data, country])
+    },[data, country, sector, pestle, source])
 
     return (
         <Container>
-            <BarChart width={450} height={500} data={barData}>
+            <BarChart width={450} height={350} data={barData}>
                 <CartesianGrid strokeDasharray="3 3"/>
-                <XAxis dataKey="sector"/>
-                <YAxis/>
+                <XAxis dataKey="topic"/>
+                {/* <YAxis/> */}
                 <Tooltip/>
                 <Legend/>
                 <Bar dataKey="intensity" fill="#8884d8"/>
