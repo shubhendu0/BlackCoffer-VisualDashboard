@@ -5,15 +5,21 @@ import SecondChart from './secondChart';
 import { getAllData } from '../../redux/features/data/dataActions';
 import { useDispatch } from 'react-redux';
 
-const InnerBox = styled(Box)`
+const Container = styled(Box)`
   border-radius: 10px;
-  width:96vw;
-  margin: 60px 0px;
-  padding: 0px;
+  width: 97vw;
+  margin-top: 65px;
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
+`; 
+
+const InnerBox = styled(Box)`
+  margin-bottom: 20px;
+  align-items: center;
+  height: 550px
 `; 
 
 const Home = () => {
@@ -23,11 +29,15 @@ const Home = () => {
     },[])
 
     return (
-        <>           
+        <>
+          <Container>
             <InnerBox>
-                <FirstChart/>
-                <SecondChart/>
-            </InnerBox>                
+              <FirstChart/>
+            </InnerBox>
+            <InnerBox>
+              <SecondChart/>
+            </InnerBox>
+          </Container>                          
         </>
     )
 }
