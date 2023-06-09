@@ -3,8 +3,13 @@ import { styled, Box } from '@mui/material';
 import { useState, useEffect } from 'react';
 
 const Container = styled(Box)`
-    display: block;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    ${'' /* border: 2px solid #d1c4e9;
+    border-radius: 10px; */}
+    width: 350px;
+    height: 400px;
 `;
 
 const RADIAN = Math.PI / 180;
@@ -79,7 +84,7 @@ const PieChartComponent = ({data, variable, country, sector}) => {
 
     return (
         <Container>
-            <PieChart width={400} height={400} >
+            <PieChart width={350} height={400} >
                 <Pie
                     data={pieData}
                     dataKey="count"
