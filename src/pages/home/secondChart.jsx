@@ -4,14 +4,21 @@ import { useSelector } from 'react-redux';
 import BarChart from '../../components/barChart';
 
 const Container = styled(Box)`
-    display: block;
-    align-items: center;
-    max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #d1c4e9;
+  border-radius: 10px;
+  padding:10px;
+  height: 650px;
+  width: 400px;
 `;
 
 const InnerBox = styled(Box)`
   margin: 10px 0;
-  align-items: center;
+  ${'' /* max-width: 420px;
+  max-height: 400px; */}
 `; 
 
 const Heading = styled(Typography)`
@@ -21,10 +28,10 @@ const Heading = styled(Typography)`
 
 
 const SecondChart = () => {
-  const [country, setCountry] = useState("India");
+  const [country, setCountry] = useState("United States of America");
   const [sector, setSector] = useState("Energy");
   const [pestle, setPestle] = useState("Industries");
-  const [source, setSource] = useState("News");
+  const [source, setSource] = useState("OPEC");
 
   const data = useSelector(state => state.data.data);
   const uniqueValuesSet1 = new Set();
@@ -71,7 +78,7 @@ const SecondChart = () => {
   return (
     <Container>
       <InnerBox>
-        <Heading> Intensity-Relevance-Likelihood </Heading>
+        <Heading> BAR-CHART </Heading>
       </InnerBox>
     
       <InnerBox>
