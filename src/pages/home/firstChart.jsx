@@ -4,13 +4,21 @@ import { useSelector } from 'react-redux';
 import PieChart from '../../components/pieChart';
 
 const Container = styled(Box)`
-    display: block;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #d1c4e9;
+  border-radius: 10px;
+  padding:10px;
+  height: 650px;
+  width: 400px;
 `;
 
 const InnerBox = styled(Box)`
   margin: 10px 0;
-  align-items: center;
+  ${'' /* max-width: 420px;
+  max-height: 400px; */}
 `; 
 
 const Heading = styled(Typography)`
@@ -19,8 +27,8 @@ const Heading = styled(Typography)`
 `;
 
 const FirstChart = () => {
-  const [country, setCountry] = useState("India");
-  const [sector, setSector] = useState("Energy");
+  const [country, setCountry] = useState("United States of America");
+  const [sector, setSector] = useState("Financial services");
   const data = useSelector(state => state.data.data);
  
   const uniqueValuesSet1 = new Set();
@@ -46,7 +54,7 @@ const FirstChart = () => {
   return (
     <Container>
       <InnerBox>
-        <Heading> Topics</Heading>
+        <Heading> PIE-CHART </Heading>
       </InnerBox>
 
       <InnerBox>
