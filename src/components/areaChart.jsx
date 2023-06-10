@@ -10,7 +10,7 @@ const Container = styled(Box)`
     ${'' /* border: 2px solid #d1c4e9;
     border-radius: 10px; */}
     width: 350px;
-    height: 300px;
+    height: 400px;
 `;
 
 const AreaChartComponent = ({data, country, year}) => {
@@ -22,9 +22,8 @@ const AreaChartComponent = ({data, country, year}) => {
     },[data, country, year])
 
     return (
-        <ResponsiveContainer>
-            <AreaChart width={350} height={400} data={areaData}
-                margin={{ top: 10, right: 30, left: 0, bottom: 30 }}>
+        <Container>
+            <AreaChart width={350} height={400} data={areaData} >
                 <defs>
                     <linearGradient id="colorA" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
@@ -43,7 +42,7 @@ const AreaChartComponent = ({data, country, year}) => {
                 <Area type="monotone" dataKey="likelihood" stroke="#8884d8" fillOpacity={1} fill="url(#colorA)" />
                 <Area type="monotone" dataKey="relevance" stroke="#82ca9d" fillOpacity={1} fill="url(#colorB)" />               
             </AreaChart>
-        </ResponsiveContainer>
+        </Container>
     )
 }
 
