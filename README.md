@@ -3,8 +3,7 @@ Click on this link to visit website => https://visualdashboard-frontend.onrender
 # Visual Dashboard
 
 ## Preview 
-
-
+![Screenshot (146)](https://github.com/shubhendu0/BlackCoffer-VisualDashboard/assets/82198522/e7ff248f-88ed-4a79-9a5c-ba032ebe0469)
 
 
 ## Project Description  
