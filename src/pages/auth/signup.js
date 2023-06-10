@@ -33,8 +33,8 @@ const Signup = () => {
     justifyContent: "center"
   }
   const paperStyle = {
-    padding :"30px",
-    height:'500px',
+    padding :"20px",
+    height:'460px',
     width:'320px',  
   }
     const avatarStyle={
@@ -67,9 +67,9 @@ const Signup = () => {
     return(
         <Grid style={boxStyle}>
             <Paper elevation={10} style={paperStyle}>
-                <Grid align='center'>
-                    <h3>Sign Up</h3>
-                </Grid>
+                <Typography variant="h5" paddingBottom="10px">
+                  Sign Up
+                </Typography>
 
                 <TextField 
                   label='Name' 
