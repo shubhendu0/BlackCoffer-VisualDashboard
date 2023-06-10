@@ -11,7 +11,7 @@ const Container = styled(Box)`
   border: 2px solid #d1c4e9;
   border-radius: 10px;
   padding:10px;
-  height: 650px;
+  height: 600px;
   width: 400px;
 `;
 
