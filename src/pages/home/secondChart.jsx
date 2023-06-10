@@ -28,7 +28,7 @@ const Heading = styled(Typography)`
 
 
 const SecondChart = () => {
-  const [country, setCountry] = useState("United States of America");
+  const [country, setCountry] = useState("China");
   const [sector, setSector] = useState("Energy");
   const [pestle, setPestle] = useState("Industries");
   const [source, setSource] = useState("OPEC");
