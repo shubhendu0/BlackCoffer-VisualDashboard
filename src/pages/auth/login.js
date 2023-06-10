@@ -36,8 +36,8 @@ const Login=()=>{
 
     }
     const paperStyle = {
-      padding :"30px",
-      height:'500px',
+      padding :"20px",
+      height:'460px',
       width:'320px', 
     }
     const avatarStyle={
@@ -69,7 +69,10 @@ const Login=()=>{
     return(
         <Grid style={boxStyle}>
             <Paper elevation={10} style={paperStyle}>
-                <Grid align='center'>
+              <Typography variant="h5" paddingBottom="10px">
+                  Sign In
+              </Typography>
+                <Grid align='center' padding='10px'>
                     <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                     <GoogleLogin
                       padding="5px"
@@ -78,7 +81,6 @@ const Login=()=>{
                         toast.error("Login Failed");
                       }}
                     />
-                    <h2>Sign In</h2>
                 </Grid>
                 <TextField 
                   label='Email' 
